@@ -3,6 +3,31 @@
 <html>
 <head>
 	<title>AoH - Album</title>
+<script language="JavaScript1.2" SRC="dynfader.js">
+</script>
+<SCRIPT LANGUAGE="JavaScript1.2" >
+	function runMe()
+	{
+		// create fader
+		var myFader1 = new DynFader();
+		// add text
+
+		myFader1.addText('<DIV ALIGN=CENTER><B>Please give the photo-album a moment to start...</DIV>');
+		myFader1.addText('<DIV ALIGN=CENTER><B>Enjoy the memorable screenshots of an innocent time in MMO history.</DIV>');
+
+		myFader1.attachPlaceHolder("FaderWithBackground");
+		myFader1.setFont('arial', 'normal', 'center');
+		myFader1.setFontSize(12);
+		myFader1.setTextColor('#ffffff');
+		myFader1.setSpeed(1);
+		myFader1.setPauseMidInterval(375);
+		myFader1.setPauseTextInterval(0);
+		myFader1.setDirection(1);
+		myFader1.setLoop(1);
+		myFader1.beginFade();
+		// create fader
+	}
+</script>
 
 <style>
 * {box-sizing:border-box}
@@ -145,8 +170,7 @@ function showSlides() {
 }
 -->
 </script>
-
-<body bgcolor="#350035" leftmargin=0 topmargin=0 onload="currentSlide(1)">
+<body bgcolor="#350035" leftmargin=0 topmargin=0 onload="runMe();currentSlide(1);">
 <IMG SRC=images/top.gif halign=left><BR>
 <TABLE BORDER=0 CELLSPACING=0 CELLPADDING=0>
 	<TD>
@@ -154,10 +178,16 @@ function showSlides() {
 	</TD>
 </TABLE>
 <TABLE BORDER=0>
+<TR>
+	<TD COLSPAN=2>
+		<SCRIPT>
+		insertPlaceHolder('FaderWithBackground', 375, 75, 'center', 'transparent', 0, 'transparent');
+		</SCRIPT>
+	</TD>
+</TR>
+<TR>
 <TD WIDTH=25></TD>
 <TD>
-
-
 <!-- Slideshow container -->
 <div class="slideshow-container">
 
@@ -452,11 +482,11 @@ function showSlides() {
   <span class="dot" onclick="currentSlide(37)"></span>
   <span class="dot" onclick="currentSlide(38)"></span>
   <span class="dot" onclick="currentSlide(39)"></span>
+  <span class="dot" onclick="currentSlide(39)"></span>
 </div>
 
-
-
 </td>
+</TR>
 </table>
 </body>
 </html>
