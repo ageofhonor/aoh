@@ -25,12 +25,21 @@
 		myFader1.setDirection(1);
 		myFader1.setLoop(1);
 		myFader1.beginFade();
-		// load slideshow
-		currentSlide(1);
 	}
 </script>
 
 <style>
+.fade-in-text {
+  font-family: Arial;
+  color: white;
+  font-size: 20px;
+  animation: fadeIn 5s;
+}
+@keyframes fadeIn {
+  0% { opacity: 0; }
+  100% { opacity: 1; }
+}
+
 * {box-sizing:border-box}
 
 /* Slideshow container */
@@ -171,7 +180,7 @@ function showSlides() {
 }
 -->
 </script>
-<body bgcolor="#350035" leftmargin=0 topmargin=0 onload="runMe();">
+<body bgcolor="#350035" leftmargin=0 topmargin=0 onload="currentSlide(1);">
 <IMG SRC=images/top.gif halign=left><BR>
 <TABLE BORDER=0 CELLSPACING=0 CELLPADDING=0>
 	<TD>
@@ -180,10 +189,10 @@ function showSlides() {
 </TABLE>
 <TABLE BORDER=0>
 <TR>
-	<TD COLSPAN=2>
-		<SCRIPT>
-		insertPlaceHolder('FaderWithBackground', 375, 75, 'center', 'transparent', 0, 'transparent');
-		</SCRIPT>
+	<TD COLSPAN=2 align=center>
+		<div class="fade-in-text">
+		  <p>Please give the photo-album a moment to start...</p>
+		</div>
 	</TD>
 </TR>
 <TR>
