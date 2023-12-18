@@ -1,0 +1,377 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<html>
+<head>
+	<title>AoH - Main Page</title>
+	<meta content="text/html; charset=windows-1252" http-equiv=Content-Type>
+	<link rel="icon" href="images/aoh.png">
+<!------------------------------------------------------------
+/ DETAILS:		Main page for AoH
+/ CREATED:		7/30/2001
+/ UPDATED: 		12/18/2023
+/ CHANGED:		Frames migration & values rotation from class to css
+/ AUTHOR:		'Doc' Morgennes Scrollbearer
+-------------------------------------------------------------->
+<STYLE>
+.fade-in-text {
+    --width:200px;
+    --height: 200px;
+    font-family: Arial;
+    color: white;
+    font-size: 20px;
+    --background: red;
+    -webkit-animation: fadeinout 5s linear forwards;
+    animation: fadeinout 10s linear forwards;
+}
+
+.fade-in-text-2 {
+    --width:200px;
+    --height: 200px;
+    font-family: Arial;
+    color: white;
+    font-size: 20px;
+    --background: red;
+    -webkit-animation: fadeinout 5s linear forwards;
+    animation: fadeinout 20s linear forwards;
+}
+
+.fade-in-text-3 {
+    --width:200px;
+    --height: 200px;
+    font-family: Arial;
+    color: white;
+    font-size: 20px;
+    --background: red;
+    -webkit-animation: fadeinout 5s linear forwards;
+    animation: fadeinout 30s linear forwards;
+}
+
+@-webkit-keyframes fadeinout {
+  0%,100% { opacity: 0; }
+  50% { opacity: 1; }
+}
+
+@keyframes fadeinout {
+  0%,100% { opacity: 0; }
+  50% { opacity: 1; }
+}
+</STYLE>
+
+<SCRIPT LANGUAGE=JavaScript>
+<!--
+//mouseover nav icons
+function move_in(img_name,img_src) {
+  if (document.images) {
+        document[img_name].src = img_src;
+  }
+}
+
+function move_out(img_name,img_src) {
+  if (document.images) {
+        document[img_name].src = img_src;
+  }
+}
+
+function openWindow(url) {
+  popupWin = window.open(url, name, 'scrollbars,resizable,width=360,height=400,left=20,top=20')
+}
+
+//date setter
+function makeArray() {
+     for (i = 0; i<makeArray.arguments.length; i++)
+         this[i] = makeArray.arguments[i];
+ }
+
+function getFullYear(d) {
+    var y = d.getYear();
+    if (y < 1000) {y += 1900};
+    return y;
+}
+
+//var zone = "EDT";
+var days = new makeArray("Sunday","Monday","Tuesday","Wednesday","Thursday","Friday","Saturday");
+var months = new makeArray("January","February","March","April","May","June","July","August","September","October","November","December");
+
+
+function format_time(t) {
+
+    var Hours = t.getHours();
+    var Minutes = t.getMinutes();
+    var Seconds = t.getSeconds();
+    var Day = t.getDay();
+    var Date = t.getDate();
+    var Month = t.getMonth();
+    var Year = getFullYear(t);
+
+    var ampm = "AM";
+    if (Hours > 11) {ampm="PM";}
+    if (Hours > 12) {Hours -= 12;}
+        if (Hours == 0) {Hours = 12;}
+
+        if (Minutes < 10) {Minutes = "0"+Minutes;}
+        if (Seconds < 10) {Seconds = "0"+Seconds;}
+
+    timeString = "";
+    timeString += days[Day];
+    timeString += " ";
+    timeString += months[Month];
+    timeString += " ";
+    timeString += Date;
+    timeString += ", ";
+    timeString += Year;
+    timeString += " @ ";
+    timeString += Hours;
+    timeString += ":";
+    timeString += Minutes;
+    timeString += ":";
+    timeString += Seconds;
+    timeString += " ";
+    timeString += ampm;
+    //timeString += " ";
+    //timeString += zone;
+
+   return timeString;
+
+}
+// -->
+</SCRIPT>
+</head>
+<body bgcolor="#350035" leftmargin=0 topmargin=0>
+<TABLE HEIGHT="100%" BORDER="0" CELLSPACING="0" CELLPADDING="0" halign=left>
+<TR>
+		<TD VALIGN="TOP" ALIGN="TOP">
+			<a HREF="index.htm" onmouseover="move_in('img1','images/home_b.jpg')" onmouseout="move_out('img1','images/home_a.jpg')">
+			<img src="images/home_a.jpg" name="img1" BORDER="0" HEIGHT="46" WIDTH="118"></a><br>
+
+			<a HREF="forum.htm" onmouseover="move_in('img2','images/forum_b.jpg')" onmouseout="move_out('img2','images/forum_a.jpg')">
+			<img src="images/forum_a.jpg" name="img2" BORDER="0" HEIGHT="38" WIDTH="118"></a><br>
+
+			<a HREF="charter.htm" onmouseover="move_in('img3','images/charter_b.jpg')" onmouseout="move_out('img3','images/charter_a.jpg')">
+			<img src="images/charter_a.jpg" name="img3" BORDER="0" HEIGHT="38" WIDTH="118"></a><br>
+
+			<a HREF="members.htm" onmouseover="move_in('img4','images/members_b.jpg')" onmouseout="move_out('img4','images/members_a.jpg')">
+			<img src="images/members_a.jpg" name="img4" BORDER="0" HEIGHT="38" WIDTH="118"></a><BR>
+
+			<a HREF="apply.htm" onmouseover="move_in('img5','images/apply_b.jpg')" onmouseout="move_out('img5','images/apply_a.jpg')">
+			<img src="images/apply_a.jpg" name="img5" BORDER="0" HEIGHT="38" WIDTH="118"></a><BR>
+
+			<a HREF="events.htm" onmouseover="move_in('img6','images/events_b.jpg')" onmouseout="move_out('img6','images/events_a.jpg')">
+			<img src="images/events_a.jpg" name="img6" BORDER="0" HEIGHT="38" WIDTH="118"></a><BR>
+
+			<a HREF="links.htm" onmouseover="move_in('img7','images/links_b.jpg')" onmouseout="move_out('img7','images/links_a.jpg')">
+			<img src="images/links_a.jpg" name="img7" BORDER="0" HEIGHT="38" WIDTH="118"></a><BR>
+
+			<a HREF="album.htm" onmouseover="move_in('img8','images/album_b.jpg')" onmouseout="move_out('img8','images/album_a.jpg')">
+			<img src="images/album_a.jpg" name="img8" BORDER="0" HEIGHT="54" WIDTH="118"></a><BR>
+			<img src="images/bottom.jpg"><br/>
+			<br/>
+			<br/>
+			&nbsp;&nbsp;<IMG SRC=images/logoaoh.gif>
+		</TD>
+		<TD VALIGN="TOP" ALIGN="TOP">
+		<IMG SRC=images/top.gif halign=left><BR>
+			<TABLE BORDER=0 CELLSPACING=0 CELLPADDING=0>
+			<TR>
+				<TD>
+					<IMG SRC=images/aohtitlebar.jpg><IMG SRC=images/title_home.jpg><A HREF=http://everquest.station.sony.com/><IMG border=0 SRC=images/aohtitlebarend.jpg></A><br/><br/>
+				</TD>
+			</TR>
+			</TABLE>
+			<TABLE BORDER=0 WIDTH="546" HEIGHT="15">
+			<TR>
+				<TD ALIGN="CENTER">
+						<div class="fade-in-text-2">
+							Respect
+						</div>
+				</TD>
+				<TD ALIGN="CENTER">
+						<div class="fade-in-text-3">
+							HONOR
+						</div>
+				</TD>
+				<TD ALIGN="CENTER">
+						<div class="fade-in-text">
+							Loyalty
+						</div>
+				</td>
+			</tr>
+			<tr>
+				<td colspan=3>
+				<center>
+				<FONT FACE=ARIAL SIZE=1 COLOR=FFFFFF>
+				<SCRIPT LANGUAGE="JavaScript">
+				<!--
+				m = new Date(document.lastModified);
+				d = new Date();
+				//document.write("The normal <I>document.lastModified</I> string: "+m+"<BR>");
+				//document.write("The modification date after formatting: "+format_time(m)+"<P>");
+
+				document.write(""+format_time(d));
+				// -->
+				</SCRIPT>
+				<b>For best results use at least 1024x768 resolution</b>
+				</FONT>
+				</center>
+					</TD>
+				</TR>
+			</TABLE>
+			<TABLE BORDER=0>
+			<TD WIDTH=25></TD>
+			<TD>
+			<TABLE CELLPADDING=0 CELLSPACING=0 width=500>
+				<TR>
+					<TD align=center background="images/date_bar.gif"><FONT FACE=arial size=2 COLOR="#FFFFFF"><b>Thursday, December 07, 2023</b></FONT></TD>
+				</TR>
+				<TR>
+					<TD valign=top background="images/parchment.gif">
+						<CENTER>
+						<TABLE width=440 height=300 border=0>
+							<TD><font face="Arial" SIZE=2 COLOR="#72006A">
+							<BR>
+							<B>
+							<CENTER><U>Wow</U>, time flies. </CENTER>
+							<BR>
+							I've returned to completing this website (<i>22 years later</i>) as a pet project, but mostly I'm hoping I can find some old friends to point here for a dose of nostalgia.<br/><br/>
+							I've actually stumbled across a <a href="https://www.reddit.com/r/everquest/comments/by0nbn/long_lost_friends_on_fennin_ro/" target="_blank">Reddit page</a> in which Taimishu was<br/>
+							looking for his old crew - I hope you make it here sometime bud.</BR></BR>
+							Finally completing the photo album was so much fun just to sift through the hundreds of old screenshots (<i>that somehow survived all these years, including two server crashes</i>).
+							<BR>
+							<BR>
+							If you're reading this - I'm glad you made it here!  Please poke around and enjoy this memory of a wonderful snapshot in time.
+							<BR/><BR/>Be well, and safe travels. <BR/><BR/>
+							~Doc
+							</B>
+							</font>
+							</TD>
+						</TABLE>
+						</CENTER>
+					</TD>
+				</TR>
+				<TR>
+					<TD align=center><HR COLOR="#FC2EEF"></TD>
+				</TR>
+				<TR>
+					<TD align=center background="images/date_bar.gif"><FONT FACE=arial size=2><b>Saturday, August 11, 2001</b></FONT></TD>
+				</TR>
+				<TR>
+					<TD valign=top background="images/parchmentsmall.gif">
+						<CENTER>
+						<TABLE width=440 height=193 border=0>
+							<TD><font face="Arial" SIZE=2>
+							Hail AoH! Today Morgennes and myself worked (again) most of the day on the site hehe =)<BR>
+							<BR>
+							The members link has been updated, a calender has been added, and the Links page is up, but under development like, well the rest of the page. :)<BR>
+							Take care everyone, and see you soon!<BR>
+							<BR>
+							~Maegwin
+							</font>
+							</TD>
+						</TABLE>
+						</CENTER>
+					</TD>
+				</TR>
+				<TR>
+				<TR>
+					<TD align=center background="images/date_bar.gif"><FONT FACE=arial size=2><b>Tuesday, August 7, 2001</b></FONT></TD>
+				</TR>
+				<TR>
+					<TD valign=top background="images/parchmentsmall.gif">
+						<CENTER>
+						<TABLE width=440 height=193 border=0>
+							<TD><font face="Arial" SIZE=2>
+							Hey friends =)<BR>
+							<BR>
+							Started some updating on the members page and got out of hand again lol.
+							Per a few requests I've made some changes to better suit lower resolutions access.
+							This should be more suitable to the eye of a visitor using 1024x768 or less =)
+							<BR>
+							Members list has been updated, another big addition should be up this weekend =)<BR>
+							See you on 8)<br>
+							- Doc
+							</font>
+							</TD>
+						</TABLE>
+						</CENTER>
+					</TD>
+				</TR>
+				<TR>
+					<TD align=center background="images/date_bar.gif"><FONT FACE=arial size=2><b>Sunday, August 5, 2001</b></FONT></TD>
+				</TR>
+				<TR>
+					<TD height=400 valign=top background="images/parchment.gif">
+						<br/><BR><BR>
+						<CENTER>
+						<TABLE width=480>
+							<TD><font face="Arial" SIZE=2>
+							Hello everyone =)<BR/><BR>
+							Well I put more time in today then I thought or planned but I think it was worth it,
+							I hope you all agree :P<BR><BR>
+							I'm sure that members roster isn't full so keep em coming guys, names/class/lvl/race,
+							and a picture if you wish =)<BR><BR>
+							About the pictures, the closer up you take one of yourself, the better it will come out
+							in the end, for anyone wanting to send a new one in just send it, I'll get to it as soon
+							as I can :)<BR>
+							If you have sent one in, go into the members roster, and roll your mouse over your name =)
+							<BR>
+							Next up will prolly be links or events, I know events is important for us to keep up on raids
+							and such.
+							<BR>
+							Lastly to see the site at it's best you should have 1152x854 resolution set =)
+							<BR>
+							Okees that's all til next time, enjoy all =)
+							<BR><BR>
+							- Doc
+							</font>
+							</TD>
+						</TABLE>
+						</CENTER>
+					</TD>
+				</TR>
+				<TR>
+					<TD align=center background="images/date_bar.gif"><FONT FACE=arial size=2><b>Sunday, July 29, 2001</b></FONT></TD>
+				</TR>
+				<TR>
+					<TD height=400 valign=top background="images/parchment.gif">
+						<br/><br/><br/>
+						<CENTER>
+						<TABLE width=480>
+							<TD><font face="Arial" SIZE=2>
+							Hello all!<BR>Maegwin and I worked on this all day today..mainly getting the ideas for the layout and such, I hope everyone likes it so far =)<BR>
+							I'm not sure how much more tonight we'll do but we're still working.<BR><BR>
+							We currently have the main page, and the forum page up and working.  Everyone will need to log in and create a user name and password. Officers need to click on apply to send email and be entered into the forum for officers.
+							<BR><BR>
+							The member roster will be made up pretty soon, I will need all AoH members to email us ASAP at <A HREF="mailto:ageofhonor@earthlink.net">ageofhonor@earthlink.net</A>, with your<BR>
+							Full-Name(game name of course ;-)/Class/Race/Lvl. so this can be comprised.<BR>
+							</BR>
+							~Morgennes (aka Doc)</BR>
+							</BR>
+							Just a note from me
+
+							...We are so proud to be given the honor of creating our family's web site! Thank you Kirhouk and Kisabul for bestowing this honor on us =)
+							</BR>
+							</BR>
+							~Maegwin
+							</font>
+							</TD>
+						</TABLE>
+						</CENTER>
+					</TD>
+				</TR>
+			</TABLE>
+			<BR/>
+			<BR/>
+			</TD>
+			</TABLE>
+		</TD>
+</TR>
+<TR><TD ALIGN="CENTER" VALIGN="BOTTOM"><A HREF="mailto:ageofhonor.fennin@gmail.com"><FONT FACE=arial size=2>Email Doc</FONT></A></TD></TR>
+<TR>
+	<TD>
+	<!-- Start Bravenet.com Service Code -->
+	<script type="text/javascript" src="https://pub12.bravenet.com/counter/code.php?id=407270&usernum=962587012&cpv=3"></script>
+	<!-- End Bravenet.com Service Code -->
+	</TD>
+</TR>
+</TABLE>
+
+</body>
+</html>
