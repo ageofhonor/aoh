@@ -141,7 +141,10 @@ function move_out(img_name,img_src) {
 
 //slideshow vals
 let slideIndex = 1;
-showSlides(slideIndex);
+
+// automation script
+setInterval(function(){ showSlides(++slideIndex); }, 10000);
+
 
 // Next/previous controls
 function plusSlides(n) {
