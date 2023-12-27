@@ -72,26 +72,33 @@ function move_out(img_name,img_src) {
 			<TD WIDTH=25></TD>
 			<TD>
 			<TABLE BORDER=0>
-			<TD WIDTH=25></TD>
 			<TD>
 			<FORM NAME=APPLICATION POST="apply.asp">
-				<TABLE BORDER=1 WIDTH=520 CELLSPACING=0>
+				<TABLE BORDER=1 WIDTH=520 CELLSPACING=5 BGCOLOR=#000000>
 					<TR>
 						<TD COLSPAN=4 ALIGN=CENTER>
 						<FONT face="CALIBRI" size=5 color=#F3AEFF><strong>- Age of Honor Guild Application -</strong></FONT>
 						</TD>
 					</TR>
 					<TR>
+						<TD COLSPAN=4 ALIGN=CENTER><FONT face="CALIBRI" size=3 color=#F3AEFF><strong>REQUIREMENTS:</strong></FONT>
+						</TD>
+					</TR>
+					<TR>
 						<TD COLSPAN=4>
-						<FONT face="CALIBRI" size=3 color=#F3AEFF><strong>Requirements:</strong></FONT>
-						<FONT face="CALIBRI" size=2 color=#F3AEFF>
-							1: Read the <a href="charter.htm">charter</a>.<br/>
-							2: Level 30 (Main) - two alternates can be added, no level reqs for alternates
+						<DL>
+							<DD><FONT face="CALIBRI" size=2 color=#F3AEFF><B>1</B> - <U>Read the <a href="charter.htm">charter</a>.</U></FONT></DD>
+							<DD><FONT face="CALIBRI" size=2 color=#F3AEFF><B>2</B> - Active toon on Fennin-Ro server.</FONT></DD>
+							<DD><FONT face="CALIBRI" size=2 color=#F3AEFF><B>3</B> - Minimum level 30 (Main). (*<I>Two alternates may be added after guildinvite, no level reqs for alternates.</I>)</FONT></DD>
+							</DL>
 						</FONT>
 						</TD>
 					</TR>
 					<TR>
-						<TD COLSPAN=4><FONT face="CALIBRI" size=3 color=#F3AEFF><strong>Toon Info:</strong></FONT>
+						<TD COLSPAN=4 ALIGN=CENTER BGCOLOR=#525252><HR></TD>
+					</TR>
+					<TR>
+						<TD COLSPAN=4 ALIGN=CENTER><FONT face="CALIBRI" size=3 color=#F3AEFF><strong>TOON INFO:</strong></FONT>
 						</TD>
 					</TR>
 					<TR>
@@ -109,7 +116,53 @@ function move_out(img_name,img_src) {
 						</TD>
 					</TR>
 					<TR>
-						<TD COLSPAN=4><FONT face="CALIBRI" size=3 color=#F3AEFF><strong>General Info:</strong></FONT>
+						<TD COLSPAN=4 ALIGN=CENTER BGCOLOR=#525252><HR></TD>
+					</TR>
+					<TR>
+					<TR>
+						<TD COLSPAN=4 ALIGN=CENTER><FONT face="CALIBRI" size=3 color=#F3AEFF><strong>GAMEPLAY:</strong></FONT>
+						</TD>
+					</TR>
+					<TR>
+						<TD COLSPAN=4><FONT face="CALIBRI" size=2 color=#F3AEFF>Do you have any experience raiding? *(<i>pre-planes counts; we are looking for raiding exercises, not locations</i>)</FONT<br/>
+							<input id="toggle-on" name="RAID1" type="radio">
+							<label for="toggle-on">YES</label>
+							<input id="toggle-off" name="RAID1" type="radio">
+							<label for="toggle-off">NO</label>
+						</TD>
+					</TR>
+					<TR>
+						<TD COLSPAN=4><FONT face="CALIBRI" size=2 color=#F3AEFF>Do you have experience with your main-class in a raid environment?</FONT<br/>
+							<input id="toggle-on" name="RAID2" type="radio">
+							<label for="toggle-on">YES</label>
+							<input id="toggle-off" name="RAID2" type="radio">
+							<label for="toggle-off">NO</label>
+						</TD>
+					</TR>
+					<TR>
+						<TD COLSPAN=4><FONT face="CALIBRI" size=2 color=#F3AEFF>What would you consider your playstyle?</FONT<br/>
+						<select name="PLAY" id="PLAY">
+							<option></option>
+							<option value="CASUAL">Casual</option>
+							<option value="DAILY">Daily</option>
+						</select>
+						</TD>
+					</TR>
+					<TR>
+						<TD COLSPAN=4><FONT face="CALIBRI" size=2 color=#F3AEFF>*If Casual - can you commit to scheduled weekend raid and/or guild-meetings?</FONT<br/>
+						<select name="CASUAL" id="CASUAL">
+							<option value="NA">Not Applicable</option>
+							<option value="MAYBE">Maybe</option>
+							<option value="YES">Yes</option>
+							<option value="NO">No</option>
+						</select>
+						</TD>
+					</TR>
+					<TR>
+						<TD COLSPAN=4 ALIGN=CENTER BGCOLOR=#525252><HR></TD>
+					</TR>
+					<TR>
+						<TD COLSPAN=4 ALIGN=CENTER><FONT face="CALIBRI" size=3 color=#F3AEFF><strong>GENERAL INFO:</strong></FONT>
 						</TD>
 					</TR>
 					<TR>
@@ -118,13 +171,13 @@ function move_out(img_name,img_src) {
 						</TD>
 					</TR>
 					<TR>
-						<TD COLSPAN=4><FONT face="CALIBRI" size=2 color=#F3AEFF>Do you have experience with your main-class in a raid environment?</FONT<br/>
-						<INPUT NAME="RAID" SIZE=100%>
+						<TD COLSPAN=4><FONT face="CALIBRI" size=2 color=#F3AEFF>Do you have any questions for us?</FONT<br/>
+						<INPUT NAME="OTHER" SIZE=100%>
 						</TD>
 					</TR>
 					<TR>
-						<TD COLSPAN=4><FONT face="CALIBRI" size=2 color=#F3AEFF>Do you have any questions for us?</FONT<br/>
-						<INPUT NAME="OTHER" SIZE=100%>
+						<TD COLSPAN=4><FONT face="CALIBRI" size=2 color=#F3AEFF>Please enter your email address - you should receive a notification of your application within a few days after submission.</FONT<br/>
+						<INPUT NAME="EMAIL" SIZE=50%>
 						</TD>
 					</TR>
 					<TR>
